@@ -57,9 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				77BC22E52B89094500DD535A /* FB_CoreData_Staged_MigrationApp.swift */,
+				77BC22EE2B89094600DD535A /* Persistence.swift */,
 				77BC22E72B89094500DD535A /* ContentView.swift */,
 				77BC22E92B89094600DD535A /* Assets.xcassets */,
-				77BC22EE2B89094600DD535A /* Persistence.swift */,
 				77319D782B890A440074E8F4 /* Model.xcdatamodeld */,
 				77BC22EB2B89094600DD535A /* Preview Content */,
 			);
