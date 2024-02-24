@@ -8,9 +8,28 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
+    @FetchRequest(
+        sortDescriptors: [],
+        animation: .easeInOut
+    )
+    private var items: FetchedResults<Item>
+    
     var body: some View {
-        VStack {
-            Text("Hello, World!")
+        NavigationStack {
+            List {
+                Section {
+                    Button("Create Item") {
+                        let newItem: Item = Item(context: viewContext)
+                        try? viewContext.save()
+                    }
+                }
+                
+                Section {
+                    ForEach(items) { item in
+                        Text(item.identifier?.uuidString ?? "No Identifier")
+                    }
+                }
+            }
         }
     }
 }
